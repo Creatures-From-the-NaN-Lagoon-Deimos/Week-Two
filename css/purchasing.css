@@ -1,0 +1,18 @@
+body {
+    background-image: url("../assets/food.jpeg");
+    background-blend-mode: luminosity;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#container {
+    background-color: black;
+    color: white;
+    font-size: 1.25em;
+    margin: auto;
+    margin-left: 40%;
+    margin-top: 10%;
+    line-height: 2em;
+    display: inline-block;
+}

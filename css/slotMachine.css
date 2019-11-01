@@ -1,0 +1,40 @@
+* {
+    text-align: center;
+    background-color: mediumpurple;
+    color: lightgray;
+}
+
+#instructions {
+    font-size: 1.5em;
+}
+
+#reelSet {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 4em;
+    list-style-type: none;
+}
+
+#messagesUl {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    font-size: 2em;
+    list-style-type: none;
+}
+
+#spin {
+    font-size: 2em;
+    margin: auto;
+}
+
+#controls {
+    display: flex;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}

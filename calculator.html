@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Maths</title>
+</head>
+<body>
+
+<input id="num1" class="numbers" type="number">
+<input id="num2" class="numbers" type="number">
+<div>
+<button class="buttons" id="addify">+</button>
+<button class="buttons" id="subtract">-</button>
+<button class="buttons" id="multiply">*</button>
+<button class="buttons" id="divide">÷</button>
+    <br>
+<button class="buttons" id="clear">C</button>
+
+</div>
+
+
+<h1>Results</h1>
+<div id="output" class="numbers">
+</div>
+
+
+<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
+<script>
+
+    var downer = new Audio(src="assets/downer.mp3");
+
+    $("#addify").click(function (a,b) {
+        var a = $("#num1").val();
+        var b = $("#num2").val();
+       a = parseFloat(a);
+       b = parseFloat(b);
+        $("#output").html(a + b);
+    });
+
+    $("#subtract").click(function (a,b) {
+        var a = $("#num1").val();
+        var b = $("#num2").val();
+        a = parseFloat(a);
+        b = parseFloat(b);
+        $("#output").html(a - b);
+    });
+
+    $("#multiply").click(function (a,b) {
+        var a = $("#num1").val();
+        var b = $("#num2").val();
+        a = parseFloat(a);
+        b = parseFloat(b);
+        $("#output").html(a * b);
+    });
+
+    $("#divide").click(function (a,b) {
+        var a = $("#num1").val();
+        var b = $("#num2").val();
+        a = parseFloat(a);
+        b = parseFloat(b);
+        if (b === 0){
+            downer.play();
+            alert("You can't divide by 0, that's NaN!!!");
+        } else
+        $("#output").html(a / b);
+    });
+
+    $("#clear").click(function () {
+        window.location.reload()
+    });
+
+</script>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 10px;
+        padding: 10px;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .numbers {
+        /*font-size: 2em;*/
+    }
+</style>
+</body>
+</html>

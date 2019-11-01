@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Star Trek TNG Soundboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<img src="assets/startreklogo.png" id="logo">
+<ul id="names">
+    <li>
+        <button class="buttons" id="rikerbutton">Riker</button>
+    </li>
+    <li>
+        <button class="buttons" id="picardbutton">Picard</button>
+    </li>
+    <li>
+        <button class="buttons" id="worfbutton">Worf</button>
+    </li>
+    <li>
+        <button class="buttons" id="crusherbutton">Crusher</button>
+    </li>
+    <li>
+        <button class="buttons" id="databutton">Data</button>
+    </li>
+    <li>
+        <button class="buttons" id="laforgebutton">LaForge</button>
+    </li>
+</ul>
+
+
+<ul id="showcase">
+    <li>
+        <div id="nameplate"></div>
+    </li>
+    <li>
+        <div id="faceplate"></div>
+    </li>
+</ul>
+
+<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
+<script>
+
+    var rikeraudio = new Audio('assets/rikeraudio.mp3');
+    var picardaudio = new Audio('assets/thisiscaptain.mp3');
+    var worfaudio = new Audio('assets/worfmerry.mp3');
+    var dataaudio = new Audio('assets/databrain.mp3');
+    var crusheraudio = new Audio('assets/crushershutup.mp3');
+    var laforgeaudio = new Audio('assets/laforge.mp3');
+
+    $('#faceplate').html('<img src="assets/holder.gif" class="gifs">');
+    $('#nameplate').html('<h1>Meet the crew of the USS Enterprise</h1>');
+
+
+    $("#rikerbutton").click(function () {
+        $('#nameplate').html('<h1>Commander William T Riker</h1>');
+        $('#faceplate').html('<img src="assets/rikergrin.gif">')
+        rikeraudio.play()
+    });
+
+    $("#picardbutton").click(function () {
+        $('#nameplate').html('<h1>Captain Jean Luc Picard</h1>');
+        $('#faceplate').html('<img src="assets/picardclap.gif" class="gifs">');
+        picardaudio.play()
+
+    });
+
+    $("#worfbutton").click(function () {
+        $('#nameplate').html('<h1>Lieutenant Commander Worf</h1>');
+        $('#faceplate').html('<img src="assets/merryworf.gif" class="gifs">');
+        worfaudio.play()
+    });
+
+    $("#databutton").click(function () {
+        $('#nameplate').html('<h1>Lieutenant Commander Data</h1>');
+        $('#faceplate').html('<img src="assets/datalaughs.gif" class="gifs">');
+        dataaudio.play()
+    });
+
+    $("#crusherbutton").click(function () {
+        $('#nameplate').html('<h1>Dr. Beverly Crusher</h1>');
+        $('#faceplate').html('<img src="assets/crusherlooks.gif" class="gifs">');
+        crusheraudio.play()
+    });
+
+    $("#laforgebutton").click(function () {
+        $('#nameplate').html('<h1>Engineering Officer Geordi La Forge</h1>');
+        $('#faceplate').html('<img src="assets/laforgerolls.gif" class="gifs">');
+        laforgeaudio.play()
+    });
+</script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Big Shoulders Display', cursive;
+        text-align: center;
+    }
+
+    #logo {
+        display: block;
+        margin: auto;
+    }
+
+    .buttons {
+        font-size: 3em;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    #names {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #nameplate {
+        background-color: rebeccapurple;
+        color: white;
+        border: 5px solid white;
+        border-radius: 5px;
+        width: 400px;
+        height: 3em;
+    }
+
+    #faceplate {
+        background-image: url("assets/outerspace.gif");
+        border: 5px solid white;
+        width: 400px;
+        height: 300px;
+        margin-top: 5px;
+        padding: 25px;
+        border-radius: 5px;
+
+    }
+
+    #showcase {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body {
+        background-image: url("assets/startrekbackground.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .gifs {
+        height: 85%;
+        width: 85%;
+        border: 3px solid white;
+        border-radius: 5px;
+        margin-top: 15px;
+    }
+    ul{
+        list-style-type: none;
+    }
+
+</style>
+</body>
+</html>
