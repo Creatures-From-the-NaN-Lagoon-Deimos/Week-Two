@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Week Two Exercises</title>
+   <style>
+      body {
+         background-color: lightgrey;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      .rectangle {
+         background: linear-gradient(to right, red, blueviolet);
+         border: 4px solid linen;
+         height: 100vh;
+         width: 80vw;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: start;
+         padding: 2em;
+      }
+      .margin {
+         margin-left: 100px;
+      }
+      .smallRectangle {
+         background: linear-gradient(to left, lightskyblue, lightsteelblue);
+         width: 40vw;
+         height: 20vh;
+         border: 4px solid linen;
+         padding: 2em;
+         font-size: 1.2em;
+         margin-left: 20%;
+
+
+
+      }
+      .medRectangle {
+         background: linear-gradient(to left, lightskyblue, lightsteelblue);
+         width: 27vw;
+         height: 59vh;
+         border: 4px solid linen;
+         padding: 2em;
+         font-size: 1.2em;
+         margin-left: 28%;
+         margin-top: 1em;
+      }
+
+   </style>
+</head>
+<body>
+   <main>
+      <div id="one">
+         <div id="two"></div>
+         <div id="three"></div>
+      </div>
+   </main>
+
+   <script
+     src="https://code.jquery.com/jquery-2.2.4.js"
+     integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+     crossorigin="anonymous"></script>
+   <script>
+
+      // return the index of first vowel in array
+      // https://edabit.com/challenge/ppBDRwSoqZYcR95Aq
+
+
+           function firstVowel(str) {
+               for (var i = 0; i < str.length; i++) {
+                   if (str[i].match(/['aeiouAEIOU']/ig)) {
+                       return i;
+                   }
+               }
+           }
+
+
+      //------------------------------------------//
+      // return how many numbers are the same in a string
+      // https://edabit.com/challenge/PKiTjA7SLK99ZZ8GK
+      {
+          function equal(a, b, c) {
+              let compareVals = 0;
+              if (a === c) {
+                  compareVals += 2;
+                  if (a === b || b === c) {
+                      compareVals++;
+                  }
+              } else if (a === b) {
+                  compareVals += 2;
+                  if (a === c || b === c) {
+                      compareVals++;
+                  }
+              } else if (b === c) {
+                  compareVals += 2;
+                  if (a === b || a === c) {
+                      compareVals++;
+                  }
+              }
+              return compareVals;
+          }
+      }
+
+
+          // final deliverable: using jquery to display this site
+
+      $('#one').css({
+      });
+
+        //BEGIN FIRST EXERCISE DISPLAY
+      $('#one').addClass('rectangle');
+
+      $('body').click(function() {
+
+          $('#two').html('<span>function firstVowel(str) {</span><br>' +
+              '               <span>for (var i = 0; i < str.length; i++) {</span><br>' +
+              '                   <span>if (str[i].match(/[\'aeiouAEIOU\']/ig)) {</span><br>' +
+              '                      <span> return i;</span><br>' +
+              '                   <span>}</span><br>' +
+              '               <span>}</span><br>' +
+              '           <span>}</span>'
+          );
+
+
+          $('#two').addClass('smallRectangle');
+          $('#two').children().first().css('margin-left', '25px');
+          $('#two').children().first().next().next().css('margin-left', '30px');
+          $('#two').children().first().next().next().next().next().css('margin-left', '35px');
+          $('#two').children().first().next().next().next().next().next().next().css('margin-left', '30px');
+          $('#two').children().first().next().next().next().next().next().next().next().next().css('margin-left', '30px');
+          $('#two').children().first().next().next().next().next().next().next().next().next().next().next().css('margin-left', '25px');
+          $('#two').children().last().css('margin-left', '20px');
+      });
+      //BEGIN NEXT EXERCISE DISPLAY
+
+      $('#one').click(function() {
+      $('#three').addClass('medRectangle');
+
+      $('#three').toggle().html('' +
+          '          <span id="spanOne" class="spanny">function equal(a, b, c) {</span><br>' +
+          '          <span class="spanny">    let compareVals = 0;</span><br>' +
+          '          <span class="spanny">    if (a === c) {</span><br>' +
+          '          <span class="spanny">        compareVals += 2;</span><br>' +
+          '          <span class="spanny">        if (a === b || b === c) {</span><br>' +
+          '          <span id="spanTwo" class="spanny">            compareVals++;</span><br>' +
+          '          <span class="spanny">        }</span><br>' +
+          '          <span class="spanny">    } else if (a === b) {</span><br>' +
+          '          <span class="spanny">        compareVals += 2;</span><br>' +
+          '          <span class="spanny">        if (a === c || b === c) {</span><br>' +
+          '          <span id="spanThree" class="spanny">            compareVals++;</span><br>' +
+          '          <span class="spanny">        }</span><br>' +
+          '          <span class="spanny">    } else if (b === c) {</span><br>' +
+          '          <span class="spanny">        compareVals += 2;</span><br>' +
+          '          <span class="spanny">        if (a === b || a === c) {</span><br>' +
+          '          <span id="spanFour" class="spanny">            compareVals++;</span><br>' +
+          '          <span class="spanny">        }</span><br>' +
+          '          <span class="spanny">    }</span><br>' +
+          '          <span class="spanny">    return compareVals;</span><br>' +
+          '          <span class="spanny">}</span><br>' +
+          '     <span class="spanny"> }</span>' +
+          '')
+
+      $('#spanOne').css('margin-left','25px');
+      $('#spanOne').next().next().css('margin-left','30px');
+      $('#spanOne').next().next().next().next().css('margin-left','35px');
+      $('#spanOne').next().next().next().next().next().next().css('margin-left','40px');
+      $('#spanOne').next().next().next().next().next().next().next().next().css('margin-left','45px');
+      $('#spanTwo').css('margin-left','50px');
+      $('#spanTwo').next().next().css('margin-left','45px');
+      $('#spanTwo').next().next().next().next().css('margin-left','35px');
+      $('#spanTwo').next().next().next().next().next().next().css('margin-left','40px');
+      $('#spanTwo').next().next().next().next().next().next().next().next().css('margin-left','45px');
+      $('#spanThree').css('margin-left','50px');
+      $('#spanThree').next().next().css('margin-left','45px');
+      $('#spanThree').next().next().next().next().css('margin-left','35px');
+      $('#spanThree').next().next().next().next().next().next().css('margin-left','40px');
+      $('#spanThree').next().next().next().next().next().next().next().next().css('margin-left','45px');
+      $('#spanFour').css('margin-left','50px');
+      $('#spanFour').next().next().css('margin-left','45px');
+      $('#spanFour').next().next().next().next().css('margin-left','35px');
+      $('#spanFour').next().next().next().next().next().next().css('margin-left','30px');
+      $('#spanFour').next().next().next().next().next().next().next().next().css('margin-left','30px');
+
+
+
+
+
+
+      });
+
+   </script>
+
+
+
+
+
+
+</body>
+</html>
