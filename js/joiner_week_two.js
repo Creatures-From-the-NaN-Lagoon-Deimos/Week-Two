@@ -14,6 +14,7 @@ $(document).ready(function() {
     var clicked = 0;
 
     $('#container').children().click(function() {
+        // Create a random color from every possible hex code
         var randomColor = Math.floor(Math.random() * 16777215).toString(16);
         var randomSize = Math.floor(Math.random() * 45) + 10;
         var randomNumber = Math.floor(Math.random() * 10);
