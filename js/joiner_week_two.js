@@ -37,10 +37,12 @@ $(document).ready(function() {
         $('div').first().children().first().fadeToggle(5000);
         randomize();
         clicked++;
+        // Starts auto random
         if (clicked === 10) {
             alert("Let me save you the trouble");
             randomInterval = setInterval(randomize, 300);}
 
+        // Cancels auto random
         if (clicked > 10) {
             alert("As you wish.");
             clearInterval(randomInterval);
