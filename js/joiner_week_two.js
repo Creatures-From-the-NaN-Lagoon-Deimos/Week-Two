@@ -18,6 +18,7 @@ $(document).ready(function() {
         var randomColor = Math.floor(Math.random() * 16777215).toString(16);
         var randomSize = Math.floor(Math.random() * 45) + 10;
         var randomNumber = Math.floor(Math.random() * 10);
+        // Changes color, number, and size on click
         $(this).css("color", '#' + randomColor).css('font-size', randomSize).html(randomNumber)
     });
 
