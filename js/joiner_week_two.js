@@ -3,6 +3,7 @@
 $(document).ready(function() {
 
 //One Line Fizzbuzz and Ternary Practice
+//    Practice more ternary functions
 
     var fizzbuzz = function (x) {for (var n = 1; n < x; n++) {n % 15 === 0 ? console.log("fizzbuzz") : n % 3 === 0 ? console.log("fizz") : n % 5 === 0 ? console.log("buzz") : console.log(n)}};
     // fizzbuzz(100);
@@ -31,6 +32,7 @@ $(document).ready(function() {
     }
     var randomInterval;
     $('h1').click(function() {
+        $('div').first().children().first().fadeToggle(5000);
         randomize();
         clicked++;
         if (clicked === 10) {
@@ -45,6 +47,7 @@ $(document).ready(function() {
         }
         console.log(clicked);
     });
+
 
 });
 
